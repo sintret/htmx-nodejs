@@ -1,17 +1,5 @@
 extends layout
 
 block content
-  div(class="col-lg-11 mx-auto p-3 py-md-5")
-    header(class="d-flex align-items-center pb-3 mb-5 border-bottom")
-      a(href="/",class="d-flex align-items-center text-dark text-decoration-none")
-        svg(xmlns="http://www.w3.org/2000/svg",width="40",height="32",class="me-2",viewBox="0 0 118 94", role="img")
-        span(class="fs-4") HTMX Example
 
-    main
-      div(class='row g-5')
-        h2 Menu
-        ul(class='icon-list')
-          li: a(herf='/click') Click to Edit
-          li: a(href='') Ajax
-
-
+  button(class="" hx-post="/click" hx-swap="outerHTML") Click Me

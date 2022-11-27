@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    h2 Click Examples
+    hr
+    div(hx-target='this' hx-swap='outerHTML')
+        div : Joe
+            label First Name
+        div : Blow
+             label Last Name
+        div : joe@blow.com
+            label Email
+        button(hx-get="/edit" class="btn btn-primary") Edit

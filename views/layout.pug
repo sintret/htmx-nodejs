@@ -15,6 +15,18 @@ html
         -moz-user-select: none;
         user-select: none;
       }
+
+      .htmx-settling tr.deactivate td {
+        background: lightcoral;
+      }
+
+      .htmx-settling tr.activate td {
+        background: darkseagreen;
+      }
+
+      tr td {
+        transition: all 1.2s;
+      }
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
@@ -22,10 +34,48 @@ html
       }
 
   body
-    block content
+    div(class="col-lg-11 mx-auto p-3 py-md-2")
+      header(class="d-flex align-items-center pb-3 mb-5 border-bottom")
+        a(href="/",class="d-flex align-items-center text-dark text-decoration-none")
+          svg(xmlns="http://www.w3.org/2000/svg",width="40",height="32",class="me-2",viewBox="0 0 118 94", role="img")
+          span(class="fs-4") HTMX Example
 
-  footer(class='pt-5 my-5 text-muted border-top')
-    p HTMX Footer
+      main
+        div.row
+          h2 Menu
+          div.col-md-3
+            ul(class='icon-list')
+              li
+                a(href='/click') Click to Edit
+              li
+                a(href='/bulk-update') Bulk Update
+
+          div.col-md-3
+            ul.icon-list
+              li
+                a(href='/click') Click to Edit
+              li
+                a(href='') Ajax
+
+          div.col-md-3
+            ul.icon-list
+              li
+                a(href='/click') Click to Edit
+              li
+                a(href='') Ajax
+
+          div.col-md-3
+            ul.icon-list
+              li
+                a(href='/click') Click to Edit
+              li
+                a(href='') Ajax
+
+      div.container-fluid
+        block content
+
+  footer(class='pt-3 my-5 text-muted border-top')
+    p(class="center") HTMX Footer
 
     script(src="https://unpkg.com/htmx.org@1.8.4",integrity="sha384-wg5Y/JwF7VxGk4zLsJEcAojRtlVp1FKKdGy1qN+OMtdq72WRvX/EdRdqg/LOhYeV",crossorigin="anonymous")
     script(src="https://getbootstrap.com/docs/5.0/dist/js/bootstrap.bundle.min.js",integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM",crossorigin="anonymous")

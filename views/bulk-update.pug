@@ -1,0 +1,44 @@
+extends layout
+
+block content
+    h2 Bulk Update
+    p This demo shows how to implement a common pattern where rows are selected and then bulk updated. This is accomplished by putting a form around a table, with checkboxes in the table, and then including the checked values in PUT's to two different endpoints: activate and deactivate:
+    hr
+    div(hx-include="#checked-contacts" hx-target="#tbody")
+        a(class="btn btn-success mx-2" hx-put="/activate") Activate
+        a(class="btn btn-danger mx-2" hx-put="/deactivate") Deactivate
+
+    form(id='checked-contacts')
+         table(class='table table-border')
+             thead
+                tr
+                    th
+                    th Name
+                    th Email
+                    th Status
+             tbody(id='tbody')
+                 tr
+                    td
+                        input(type='checkbox' name='ids' value='0')
+                    td Joe Smith
+                    td joe@smith.org
+                    td Active
+                 tr
+                    td
+                        input(type='checkbox' name='ids' value='1')
+                    td Angie MacDowell
+                    td angie@macdowell.org
+                    td Active
+                 tr
+                    td
+                        input(type='checkbox' name='ids' value='2')
+                    td Fuqua Tarkenton
+                    td fuqua@tarkenton.org
+                    td Active
+
+                 tr
+                    td
+                        input(type='checkbox' name='ids' value='3')
+                    td Kim Yee
+                    td kim@yee.org
+                    td Active

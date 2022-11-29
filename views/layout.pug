@@ -7,6 +7,7 @@ html
     link(href="https://getbootstrap.com/docs/5.0/dist/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC", crossorigin="anonymous")
     meta(name="theme-color", content="#7952b3")
     link(href="https://getbootstrap.com/docs/5.0/examples/starter-template/starter-template.css", rel="stylesheet")
+    link(href="/css/style.css", rel="stylesheet")
     style(type="text/css").
       bd-placeholder-img {
         font-size: 1.125rem;
@@ -16,22 +17,8 @@ html
         user-select: none;
       }
 
-      .htmx-settling tr.deactivate td {
-        background: lightcoral;
-      }
 
-      .htmx-settling tr.activate td {
-        background: darkseagreen;
-      }
 
-      tr td {
-        transition: all 1.2s;
-      }
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
 
   body
     div(class="col-lg-11 mx-auto p-3 py-md-2")
@@ -49,11 +36,15 @@ html
                 a(href='/click') Click to Edit
               li
                 a(href='/bulk-update') Bulk Update
+              li
+                a(href='/click-to-load') Click to Load
+              li
+                a(href='/delete-row') Delete Row
 
           div.col-md-3
             ul.icon-list
               li
-                a(href='/click') Click to Edit
+                a(href='/edit-row') Edit Row
               li
                 a(href='') Ajax
 

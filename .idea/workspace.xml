@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f86e961-479f-4f7d-8934-9e12fbe6fb9b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/views/bulk-update.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/click.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/bars.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/click-to-load.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/delete-row.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/delete-row.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/edit-row.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/style.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/layout.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout.pug" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,6 +24,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Pug File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -29,8 +35,14 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/images" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\htmx\htmx\public\images" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -57,7 +69,8 @@
       <workItem from="1669115796449" duration="4015000" />
       <workItem from="1669212190715" duration="594000" />
       <workItem from="1669257163974" duration="594000" />
-      <workItem from="1669537163357" duration="4924000" />
+      <workItem from="1669537163357" duration="5614000" />
+      <workItem from="1669654564210" duration="5542000" />
     </task>
     <servers />
   </component>

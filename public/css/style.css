@@ -1,0 +1,24 @@
+bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.htmx-settling tr.deactivate td {
+  background: lightcoral;
+}
+
+.htmx-settling tr.activate td {
+  background: darkseagreen;
+}
+
+tr td {
+  transition: all 1.2s;
+}
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}

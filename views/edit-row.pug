@@ -1,0 +1,40 @@
+extends layout
+
+block content
+    h2 Edit Row
+    p Here we are getting a bit fancy and only allowing one row at a time to be edited, using hyperscript. We check to see if there is a row with the .editing class on it and confirm that the user wants to edit this row and dismiss the other one. If so, we send a cancel event to the other row so it will issue a request to go back to its initial state.
+    p We then trigger the edit event on the current element, which triggers the htmx request to get the editable version of the row.
+    p Note that if you didn't care if a user was editing multiple rows, you could omit the hyperscript and custom hx-trigger, and just let the normal click handling work with htmx. You could also implement mutual exclusivity by simply targeting the entire table when the Edit button was clicked. Here we wanted to show how to integrate htmx and hyperscript to solve the problem and narrow down the server interactions a bit, plus we get to use a nice SweetAlert confirm dialog.
+    hr
+    table(class='table table-border delete-row-example')
+        thead
+            tr
+                th Name
+                th Email
+                th Status
+                th
+        tbody(id='tbody' hx-confirm='are you sure?' hx-target='closest tr' hx-swap='outerHTML swap:1s')
+            tr
+                td Joe Smith 0
+                td joe@smith.org
+                td Active
+                td
+                    button(class='btn btn-danger' hx-delete='/delete-row/0') Delete
+            tr
+                td Joe Smith 1
+                td joe@smith.org
+                td Active
+                td
+                    button(class='btn btn-danger' hx-delete='/delete-row/1') Delete
+            tr
+                td Joe Smith 2
+                td joe@smith.org
+                td Active
+                td
+                    button(class='btn btn-danger' hx-delete='/delete-row/2') Delete
+            tr
+                td Joe Smith 3
+                td joe@smith.org
+                td Active
+                td
+                    button(class='btn btn-danger' hx-delete='/delete-row/3') Delete

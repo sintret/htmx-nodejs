@@ -1,0 +1,33 @@
+extends layout
+
+block content
+    h2 Click To Load
+    p This example shows how to implement click-to-load the next page in a table of data. The crux of the demo is the final row:
+    hr
+    table(class='table table-border')
+        thead
+            tr
+                th Name
+                th Email
+                th ID
+        tbody(id='tbody')
+            tr
+                td Joe Smith
+                td joe@smith.org
+                td 1
+            tr
+                td Joe Smith
+                td joe@smith.org
+                td 2
+            tr
+                td Joe Smith
+                td joe@smith.org
+                td 3
+            tr
+                td Joe Smith
+                td joe@smith.org
+                td 4
+            tr(id='replaceMe')
+                td(colspan='3')
+                    button(class='btn btn-primary' hx-get="/click-to-load?page=5" hx-target="#replaceMe" hx-swap="outerHTML") Load More Agents...
+                        img(class="htmx-indicator" src="/images/bars.svg")
